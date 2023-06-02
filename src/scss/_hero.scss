@@ -1,0 +1,150 @@
+.hero {
+  height: 100vh;
+  background-image: url(../img/header.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media (max-width: $breakpoint768) {
+    height: auto;
+  }
+
+  &__container {
+    padding-top: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;
+
+    @media (max-width: $breakpoint768) {
+      padding: 150px 20px 50px;
+      align-items: center;
+      gap: 40px;
+    }
+  }
+
+  &__title {
+    max-width: 800px;
+    text-transform: uppercase;
+    font-family: $fontSecondary;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+
+    @media (max-width: $breakpoint768) {
+      text-align: center;
+      font-size: 32px;
+      line-height: 32px;
+    }
+
+    span {
+      color: $blueColor
+    }
+  }
+
+  &__body {
+
+    h2 {
+      margin-bottom: 10px;
+      font-family: $fontSecondary;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 20px;
+      line-height: 24px;
+
+      @media (max-width: $breakpoint480) {
+        text-align: center;
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      font-family: $fontMain;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 24px;
+
+      @media (max-width: $breakpoint480) {
+        font-size: 16px;
+        line-height: 18px;
+      }
+
+      li {
+        display: flex;
+        align-items: center;
+        background-image: url(../img/tire.svg);
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 20px;
+      }
+    }
+  }
+
+  &__btns {
+    display: flex;
+    gap: 30px;
+
+    @media (max-width: $breakpoint768) {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+
+  &__order {
+    max-width: 183px;
+    width: 100%;
+    padding: 15px 10px;
+    text-transform: uppercase;
+    font-family: $fontMain;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: $whiteColor;
+    background-color: $blueColor;
+    border: 1px solid $whiteColor;
+    border-radius: 4px;
+
+    @media (max-width: $breakpoint768) {
+      max-width: 130px;
+    }
+
+    &:hover {
+      color: #2A2B30;
+      background-color: $whiteColor;
+      border: 1px solid #6F6D7B;
+      transition: .5s;
+    }
+  }
+
+  &__details {
+    max-width: 183px;
+    width: 100%;
+    padding: 15px 10px;
+    text-transform: uppercase;
+    font-family: $fontMain;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #2A2B30;
+    background-color: $whiteColor;
+    border: 1px solid #6F6D7B;
+    border-radius: 4px;
+
+    @media (max-width: $breakpoint768) {
+      max-width: 130px;
+    }
+
+    &:hover {
+      color: $whiteColor;
+      background-color: $blueColor;
+      border: 1px solid $whiteColor;
+      transition: .5s;
+    }
+  }
+}

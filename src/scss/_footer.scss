@@ -1,0 +1,72 @@
+.footer {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    font-family: $fontMain;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    background-color: #3D4050;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        gap: 40px;
+
+        @media (max-width: $breakpoint1450) {
+            gap: 20px;
+        }
+
+        @media (max-width: 1050px) {
+            gap: 10px;
+        }
+
+        @media (max-width: $breakpoint992) {
+            padding: 20px;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+    }
+
+    &__copy {
+        color: $whiteColor;
+
+        @media (max-width: $breakpoint992) {
+            text-align: center;
+            order: 2;
+        }
+
+    }
+
+    &__divider {
+        width: 1px;
+        height: 18px;
+        background-color: $grayColor;
+
+        @media (max-width: $breakpoint992) {
+            display: none;
+        }
+    }
+
+    &__payment {
+        display: flex;
+        gap: 10px;
+        color: $grayColor;
+    }
+
+    &__contact {
+        color: $whiteColor;
+
+        a {
+            display: flex;
+            gap: 10px;
+            transition: .5s;
+
+            &:hover {
+                color: $blueColor;
+            }
+        }
+    }
+}

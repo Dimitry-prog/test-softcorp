@@ -1,0 +1,115 @@
+$height: 46px;
+
+.select {
+    width: 100%;
+    position: relative;
+    z-index: 10;
+
+    &__backdrop {
+        position: fixed;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: transparent;
+        z-index: -1;
+        display: none;
+    }
+
+    &.open {
+        background: rgba(61, 64, 80, 0.85);
+
+        .select__dropdown {
+            border-top: none;
+            display: block
+        }
+
+        .select__input {
+            border-bottom: none;
+            border-color: #3D4050;
+            color: $whiteColor;
+            background: rgba(61, 64, 80, 0.85);
+        }
+
+        .select__backdrop {
+            display: block
+        }
+    }
+
+    &__input {
+        background: rgba(255, 255, 255, 0.85);
+        border: 1px solid $whiteColor;
+        border-radius: 3px;
+        height: $height;
+        display: flex;
+        align-items: center;
+        padding: 0 15px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+
+        .select__arrow {
+            pointer-events: none;
+
+            &.open {
+                transform: rotate(180deg);
+            }
+
+            width: 15px;
+        }
+
+        span {
+            pointer-events: none;
+        }
+    }
+
+    &__dropdown {
+        display: none;
+        position: absolute;
+        border: 1px solid #3D4050;
+        border-radius: 5px;
+        top: $height;
+        left: 0;
+        right: 0;
+        max-height: 200px;
+        overflow-y: auto;
+        box-shadow: 2px 3px 5px rgba(0, 0, 0, .3);
+        background-color: #272733;
+
+        &::-webkit-scrollbar-track {
+            background: #3D4050;
+            border-radius: 3px;
+        }
+
+        &::-webkit-scrollbar {
+            width: 7px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #3E9CDC;
+            border-radius: 3px;
+        }
+
+        .select__list {
+            .select__item {
+                padding: 10px;
+                font-family: $fontMain;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 34px;
+                color: $whiteColor;
+                cursor: pointer;
+                transition: .5s;
+
+                &.selected {
+                    color: $blueColor;
+                }
+
+                &:hover {
+                    color: $blueColor;
+                }
+            }
+        }
+    }
+}
